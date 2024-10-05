@@ -21,8 +21,8 @@ const Header = () => {
           <Link className={'text-black text-[16px] font-medium'} href="/Shop">
             Shop{' '}
           </Link>
-          <Link className={'text-black text-[16px] font-medium'} href="/About">
-            About
+          <Link className={'text-black text-[16px] font-medium'} href="/Blog">
+            Blog
           </Link>
           <Link
             className={'text-black text-[16px] font-medium'}
