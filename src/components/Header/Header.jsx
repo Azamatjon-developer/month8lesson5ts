@@ -26,12 +26,21 @@ const Header = () => {
         <Link className={'text-black text-[16px] font-medium'} href="/Contact">
           Contact
         </Link>
+       
       </div>
       <div className={'flex items-center gap-[45px] cursor-pointer'}>
         <Image src={user} alt={'user'} />
         <Image src={search} alt={'user'} />
         <Image src={heart} alt={'user'} />
         <Image src={basket} alt={'user'} />
+      </div>
+      <div className={"flex gap-10"}>
+      <Link className={'text-black text-[16px] font-medium'} href="/Login">
+          Login
+        </Link>
+        <Link className={'text-black text-[16px] font-medium'} href="/SignUp">
+          Sign Up
+        </Link>
       </div>
     </div>
   )

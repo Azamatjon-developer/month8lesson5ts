@@ -1,12 +1,13 @@
 import Header from '@/components/Header/Header'
 import React from 'react'
 
-const page = () => {
+const Layout = ({children}) => {
   return (
     <div>
-        <Header/>
+      <Header/>
+      {children}
     </div>
   )
 }
 
-export default page
+export default Layout
