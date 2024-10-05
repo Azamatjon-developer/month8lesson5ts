@@ -1,4 +1,3 @@
-import Header from '@/components/Header/Header'
 import React from 'react'
 import './globals.css'
 
@@ -12,7 +11,6 @@ const Layout = ({children}) => {
     <html>
       <body>        
         <div>
-          
           {children}  
         </div>
       </body>

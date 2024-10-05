@@ -1,4 +1,3 @@
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -9,7 +8,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '1rem', 
+      padding: '1rem',
       screens: {
         sm: '640px',
         md: '768px',
@@ -18,7 +17,15 @@ module.exports = {
       },
     },
     extend: {
-      
+      backgroundImage: {
+        'hero-background': 'url(/assets/Images/background.png)',
+      },
+      colors: {
+        primary: '#3490dc',
+        secondary: '#2ecc71',
+        accent: '#34495e',
+        error: '#e74c3c',
+      },
     },
   },
   plugins: [],
