@@ -3,7 +3,9 @@ import React from 'react'
 const Shop = () => {
   return (
     <div>
-      <h2>SHop </h2>
+        <div className={"bg-shop-background bg-cover h-[90vh] relative"}>
+            Shop Page
+        </div>
     </div>
   )
 }

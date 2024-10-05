@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero-background': 'url(/assets/Images/background.png)',
+        // 'shop-background': 'url(/assets/Images/shop.png)',
       },
       colors: {
         primary: '#3490dc',

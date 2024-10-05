@@ -1,10 +1,10 @@
 'use client'
 import Image from 'next/image'
-import Logo from '@/app/assets/Images/Logo.png'
-import user from '@/app/assets/Images/user.svg'
-import search from '@/app/assets/Images/search.svg'
-import heart from '@/app/assets/Images/heart.svg'
-import basket from '@/app/assets/Images/basket.svg'
+import Logo from '../../../public/assets/Images/Logo.png'
+import user from '../../../public/assets/Images/user.svg'
+import search from '../../../public/assets/Images/search.svg'
+import heart from '../../../public/assets/Images/heart.svg'
+import basket from '../../../public/assets/Images/basket.svg'
 import Link from 'next/link'
 
 const Header = () => {

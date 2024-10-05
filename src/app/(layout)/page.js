@@ -6,7 +6,7 @@ const Home = () => {
       <div className={'bg-hero-background bg-cover h-[90vh] relative'}>
         <div
           className={
-            'absolute w-[643px] h-[443px] bg-[#FFF3E3] top-[153px] left-[739px] rounded-[10px] py-[62px] px-[40px]'
+            'absolute w-[643px] h-[443px] bg-[#FFF3E3] top-[153px] left-[759px] rounded-[10px] py-[62px] px-[40px]'
           }
         >
           <h2
