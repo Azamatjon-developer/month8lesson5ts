@@ -80,6 +80,9 @@ const Home = () => {
           </div>
         ))}
       </div>
+      <div className={"mt-[56px] mb-[32px] text-center text-[#3A3A3A] text-[40px] font-bold"}>
+        <h2>Our Products</h2>
+      </div>
     </div>
   )
 }
