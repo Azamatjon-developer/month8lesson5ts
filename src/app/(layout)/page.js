@@ -1,6 +1,17 @@
+'use client'
+import axios, { Axios } from 'axios'
 import React from 'react'
+import { useEffect, useState } from 'react'
 
 const Home = () => {
+  const [data, setData] = useState([])
+  useEffect(() => {
+    axios
+      .get('https://dummyjson.com/products?limit=3')
+      .then((res) => setData(res.data.products))
+  }, [])
+
+  console.log(data)
   return (
     <div>
       <div className={'bg-hero-background bg-cover h-[90vh] relative'}>
@@ -31,7 +42,7 @@ const Home = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
             tellus, luctus nec ullamcorper mattis.
           </p>
-          <div className={"mb-10"}>
+          <div className={'mb-10'}>
             <button
               className={
                 'pt-[25px] pb-[25px] pl-[72px] pr-[72px] text-white font-bold text-[16px] rounded-sm cursor-pointer bg-[#B88E2F]'
@@ -43,9 +54,31 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className={"pt-[59px] pb-[63px] text-center"}>
-        <h2 className={"text-[#333333] font-bold text-[32px] pb-[8px]"}>Browse The Range</h2>
-        <p className={"text-[#666666] font-normal text-center text-[20px]"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div className={'pt-[59px] pb-[63px] text-center'}>
+        <h2 className={'text-[#333333] font-bold text-[32px] pb-[8px]'}>
+          Browse The Range
+        </h2>
+        <p className={'text-[#666666] font-normal text-center text-[20px]'}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <div className={'container flex'}>
+        {data?.map((el) => (
+          <div key={el.id} className={'flex flex-wrap gap-[20px]'}>
+            <div className={''}>
+              <img
+                className={'w-[341px] h-[480px] object-contain'}
+                src={el.images[0]}
+                alt={el.title}
+              />
+              `
+              <h3 className={' text-[22px] text-center text-[#333333]'}>
+                {el.title.substring(0, 12)}...
+              </h3>
+            </div>
+         
+          </div>
+        ))}
       </div>
     </div>
   )
