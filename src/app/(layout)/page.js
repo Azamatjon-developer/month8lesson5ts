@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react'
 
 const Home = () => {
   const [data, setData] = useState([])
-  
 
   useEffect(() => {
     axios
@@ -98,7 +97,6 @@ const Home = () => {
         <h2>Our Products</h2>
       </div>
       <OurProducts />
-     
     </div>
   )
 }

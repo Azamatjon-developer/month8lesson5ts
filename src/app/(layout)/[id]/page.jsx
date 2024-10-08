@@ -6,7 +6,6 @@ import { useState, useEffect } from 'react'
 
 const About = ({ params }) => {
   const [singleData, setSingleData] = useState([])
-
   useEffect(() => {
     axios
       .get(`https://dummyjson.com/products/${params.id}`)
