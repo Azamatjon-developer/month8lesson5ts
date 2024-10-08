@@ -1,17 +1,18 @@
 'use client'
+import OurProducts from '@/components/Main/OurProducts'
 import axios, { Axios } from 'axios'
 import React from 'react'
 import { useEffect, useState } from 'react'
 
 const Home = () => {
   const [data, setData] = useState([])
+ 
   useEffect(() => {
     axios
       .get('https://dummyjson.com/products?limit=3')
       .then((res) => setData(res.data.products))
   }, [])
 
-  console.log(data)
   return (
     <div>
       <div className={'bg-hero-background bg-cover h-[90vh] relative'}>
@@ -64,7 +65,7 @@ const Home = () => {
       </div>
       <div className={'container flex'}>
         {data?.map((el) => (
-          <div key={el.id} className={'flex flex-wrap gap-[20px]'}>
+          <div key={el.id} className={'flex flex-wrap gap-[20px] bg-white shadow-xl rounded-lg overflow-hidden text-center'}>
             <div className={''}>
               <img
                 className={'w-[341px] h-[480px] object-contain'}
@@ -76,13 +77,17 @@ const Home = () => {
                 {el.title.substring(0, 12)}...
               </h3>
             </div>
-         
           </div>
         ))}
       </div>
-      <div className={"mt-[56px] mb-[32px] text-center text-[#3A3A3A] text-[40px] font-bold"}>
+      <div
+        className={
+          'mt-[56px] mb-[32px] text-center text-[#3A3A3A] text-[40px] font-bold'
+        }
+      >
         <h2>Our Products</h2>
       </div>
+        <OurProducts/>
     </div>
   )
 }
