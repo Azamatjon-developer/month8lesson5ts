@@ -1,3 +1,4 @@
+import OurProducts from '@/components/Main/OurProducts'
 import React from 'react'
 
 const Shop = () => {
@@ -19,6 +20,10 @@ const Shop = () => {
           <p className={''}>Home Shop</p>
         </div>
       </div>
+      <div>
+        
+      </div>
+      <OurProducts/>
     </div>
   )
 }

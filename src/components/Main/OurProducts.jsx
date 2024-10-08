@@ -1,6 +1,7 @@
 'use client'
 import axios from 'axios'
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 
 const OurProducts = () => {
@@ -13,10 +14,11 @@ const OurProducts = () => {
   }, [])
 
   return (
-    <div className="bg-gray-100 min-h-screen py-10">
+    <div className=" py-10">
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6">
         {ourData?.map((item) => (
-          <div
+          <Link href={`./${item.id}`}
+
             key={item.id}
             className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl"
           >
@@ -43,17 +45,8 @@ const OurProducts = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
-      </div>
-      <div className={'mx-auto text-center mt-[32px] mb-[70px]'}>
-        <button
-          className={
-            'text-[#B88E2F] pt-[12px] pb-[12px] pr-[74px] pl-[82px] border border-[#B88E2F] font-semibold'
-          }
-        >
-          Show More
-        </button>
       </div>
     </div>
   )

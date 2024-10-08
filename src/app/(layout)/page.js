@@ -1,12 +1,16 @@
 'use client'
 import OurProducts from '@/components/Main/OurProducts'
+import ShowMore from '@/components/Main/ShowMore'
 import axios, { Axios } from 'axios'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 import { useEffect, useState } from 'react'
 
 const Home = () => {
   const [data, setData] = useState([])
- 
+  const router = useRouter()
+
   useEffect(() => {
     axios
       .get('https://dummyjson.com/products?limit=3')
@@ -65,7 +69,12 @@ const Home = () => {
       </div>
       <div className={'container flex'}>
         {data?.map((el) => (
-          <div key={el.id} className={'flex flex-wrap gap-[20px] bg-white shadow-xl rounded-lg overflow-hidden text-center'}>
+          <div
+            key={el.id}
+            className={
+              'flex flex-wrap gap-[20px] bg-white shadow-xl rounded-lg overflow-hidden text-center'
+            }
+          >
             <div className={''}>
               <img
                 className={'w-[341px] h-[480px] object-contain'}
@@ -87,9 +96,9 @@ const Home = () => {
       >
         <h2>Our Products</h2>
       </div>
-        <OurProducts/>
+      <OurProducts />
+      <ShowMore/>
     </div>
   )
 }
-
 export default Home
