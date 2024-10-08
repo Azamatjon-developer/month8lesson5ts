@@ -1,15 +1,14 @@
 'use client'
 import OurProducts from '@/components/Main/OurProducts'
 import ShowMore from '@/components/Main/ShowMore'
-import axios, { Axios } from 'axios'
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import axios from 'axios'
+import Image from 'next/image'
 import React from 'react'
 import { useEffect, useState } from 'react'
 
 const Home = () => {
   const [data, setData] = useState([])
-  const router = useRouter()
+  
 
   useEffect(() => {
     axios
@@ -76,7 +75,9 @@ const Home = () => {
             }
           >
             <div className={''}>
-              <img
+              <Image
+                width={300}
+                height={300}
                 className={'w-[341px] h-[480px] object-contain'}
                 src={el.images[0]}
                 alt={el.title}
@@ -97,7 +98,7 @@ const Home = () => {
         <h2>Our Products</h2>
       </div>
       <OurProducts />
-      <ShowMore/>
+     
     </div>
   )
 }
