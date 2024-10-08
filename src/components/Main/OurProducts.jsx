@@ -31,16 +31,29 @@ const OurProducts = () => {
               <h3 className="text-lg font-semibold text-gray-800">
                 {item.title.substring(0, 12)}...
               </h3>
-              <p className="text-sm text-gray-600 mt-2">Category: {item.category}</p>
+              <p className="text-sm text-gray-600 mt-2">
+                Category: {item.category}
+              </p>
               <p className="text-lg text-[#FF7F50] mt-2 font-semibold">
                 $ {item.price}
               </p>
               <div className="flex items-center justify-between mt-2">
-                <p className="text-[20px] text-[#3A3A3A]">Rating: {item.rating}</p>
-                  </div>
+                <p className="text-[20px] text-[#3A3A3A]">
+                  Rating: {item.rating}
+                </p>
+              </div>
             </div>
           </div>
         ))}
+      </div>
+      <div className={'mx-auto text-center mt-[32px] mb-[70px]'}>
+        <button
+          className={
+            'text-[#B88E2F] pt-[12px] pb-[12px] pr-[74px] pl-[82px] border border-[#B88E2F] font-semibold'
+          }
+        >
+          Show More
+        </button>
       </div>
     </div>
   )
