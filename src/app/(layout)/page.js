@@ -4,9 +4,29 @@ import axios from 'axios'
 import Image from 'next/image'
 import React from 'react'
 import { useEffect, useState } from 'react'
+import '../../i18n'
+import { useTranslation } from 'react-i18next'
 
 const Home = () => {
   const [data, setData] = useState([])
+  let { t, i18n } = useTranslation()
+  const [lange, setLange] = useState('en')
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedLang = localStorage.getItem('i18nextLng') || 'en'
+      setLange(storedLang)
+      i18n.changeLanguage(storedLang)
+    }
+  }, [i18n])
+
+  const handleLanguageChange = (lang) => {
+    setLange(lang)
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('i18nextLng', lang)
+    }
+    i18n.changeLanguage(lang)
+  }
 
   useEffect(() => {
     axios
@@ -27,22 +47,20 @@ const Home = () => {
               'text-[16px] text-[#333333] tracking-normal font-semibold pb-[5px]'
             }
           >
-            New Arrival
+            {t('main.title')}
           </h2>
           <h3
             className={
               'text-[52px] text-[#B88E2F] tracking-wider font-bold pb-[17px]'
             }
           >
-            Discover Our <br /> New Collection
-          </h3>
+           {t('main.title')}          </h3>
           <p
             className={
               'text-[18px] text-[#333333] tracking-normal font-medium pb-[46px]'
             }
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis.
+            {t('main.description')}
           </p>
           <div className={'mb-10'}>
             <button
@@ -51,7 +69,7 @@ const Home = () => {
               }
             >
               {' '}
-              BUY NOW{' '}
+              {t('main.buttonType')}{' '}
             </button>
           </div>
         </div>

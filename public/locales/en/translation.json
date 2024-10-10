@@ -6,5 +6,10 @@
         "Contact":"Contact",
         "Login":"Login",
         "SignUp":"SignUp"
+    },
+    "main" : {
+        "title":"Discover Our New Collection",
+        "description":"This is a simple e-commerce website built using React, Next.js, and Tailwind CSS.",
+        "buttonType":"Buy Now"
     }
 }

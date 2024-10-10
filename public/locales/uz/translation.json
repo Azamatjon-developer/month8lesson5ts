@@ -6,5 +6,10 @@
     "Contact": "Bog'lanish",
     "Login": "Kirish",
     "SignUp": "Ro'yxatdan otish"
-  }
+  },
+  "main" : {
+    "title":"Bizning yangi kolleksiyamiz bilan tanishing",
+    "description":"Bu React, Next.js va Tailwind CSS yordamida yaratilgan oddiy elektron tijorat veb-sayti.",
+    "buttonType":"Xoziroq sotib oling"
+}
 }
