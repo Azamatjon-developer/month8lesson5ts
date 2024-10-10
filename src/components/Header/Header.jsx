@@ -41,10 +41,10 @@ const Header = () => {
             {t('navbar.Home')}
           </Link>
           <Link className={'text-black text-[16px] font-medium'} href="/Shop">
-          {t('navbar.Shop')}
+            {t('navbar.Shop')}
           </Link>
           <Link className={'text-black text-[16px] font-medium'} href="/Blog">
-          {t('navbar.Blog')}
+            {t('navbar.Blog')}
           </Link>
           <Link
             className={'text-black text-[16px] font-medium'}
@@ -61,13 +61,13 @@ const Header = () => {
         </div>
         <div className={'flex gap-10'}>
           <Link className={'text-black text-[16px] font-medium'} href="/Login">
-          {t('navbar.Login')}
+            {t('navbar.Login')}
           </Link>
           <Link className={'text-black text-[16px] font-medium'} href="/SignUp">
-          {t('navbar.SignUp')}
+            {t('navbar.SignUp')}
           </Link>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="bg-[# B88E2F]">
           <select
             onClick={(e) => handleLanguageChange(e.target.value)}
             name=""
@@ -75,6 +75,7 @@ const Header = () => {
           >
             <option value="en">English </option>
             <option value="uz">Uzbek </option>
+            <option value="ru">Russian </option>
           </select>
         </div>
       </div>
