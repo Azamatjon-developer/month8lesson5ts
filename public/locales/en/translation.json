@@ -1,0 +1,10 @@
+{
+    "navbar":{
+        "Home":"Home",
+        "Shop":"Shop",
+        "Blog":"Blog",
+        "Contact":"Contact",
+        "Login":"Login",
+        "SignUp":"SignUp"
+    }
+}

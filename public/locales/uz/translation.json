@@ -1,0 +1,10 @@
+{
+  "navbar": {
+    "Home": "Bosh",
+    "Shop": "Savdo",
+    "Blog": "Shaxsiy Blog",
+    "Contact": "Bog'lanish",
+    "Login": "Kirish",
+    "SignUp": "Ro'yxatdan otish"
+  }
+}

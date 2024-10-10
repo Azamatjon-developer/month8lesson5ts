@@ -1,6 +1,5 @@
 'use client'
 import OurProducts from '@/components/Main/OurProducts'
-import ShowMore from '@/components/Main/ShowMore'
 import axios from 'axios'
 import Image from 'next/image'
 import React from 'react'

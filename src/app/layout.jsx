@@ -1,5 +1,6 @@
 import React from 'react'
 import './globals.css'
+import "../i18n"
 
 export const metadata = {
   title: 'Lesson 5 ',
